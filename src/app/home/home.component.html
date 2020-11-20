@@ -1,0 +1,18 @@
+<table>
+    <thead>
+        <th sort-direction="asc">Entry Id</th>
+        <th>Count</th>
+        <th>Threshold</th>
+        <th>Time</th>
+        <th>Device Name</th>        
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of count">
+            <td>{{ c.data.id }}</td>
+            <td>{{ c.data.count }}</td>
+            <td>{{ c.data.threshold }}</td>
+            <td>{{ c.data.time.toDate() | date : 'yyyy-MM-dd hh:mm:ss' }}</td>
+            <td>{{ c.data.device_name }}</td>
+        </tr>
+    </tbody>
+</table>
